@@ -46,7 +46,7 @@ pub async fn create_photo(
         .execute(pool)
         .await?;
 
-    // 直接查询最新插入的记录（通过 filename 查询，因为它是唯一的 UUID）
+    // 直接查询最新插入的记录
     sqlx::query_as::<_, Photo>("SELECT * FROM photos WHERE filename = ? ORDER BY id DESC LIMIT 1")
         .bind(filename)
         .fetch_one(pool)
