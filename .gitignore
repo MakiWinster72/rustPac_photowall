@@ -1,2 +1,46 @@
-uploads
-node_modules
+# -----------------------
+# Rust backend
+# -----------------------
+# 编译产物
+/target/
+**/*.rs.bk
+
+# Cargo 锁文件（应用保留，不忽略，如果是库可忽略Cargo.lock）
+# /Cargo.lock
+
+# 编辑器相关
+**/*.swp
+**/*.swo
+.idea/
+.vscode/
+
+# -----------------------
+# Node.js / React frontend
+# -----------------------
+# Node 模块
+/frontend/node_modules/
+
+# npm / yarn 锁文件（应用保留，不忽略）
+# /frontend/package-lock.json
+# /frontend/yarn.lock
+
+# 构建产物
+/frontend/build/
+/frontend/dist/
+
+# 日志
+/frontend/npm-debug.log*
+/frontend/yarn-debug.log*
+/frontend/yarn-error.log*
+
+# 编辑器相关
+/frontend/.idea/
+/frontend/.vscode/
+
+# -----------------------
+# 通用
+# -----------------------
+# 系统文件
+.DS_Store
+Thumbs.db
+
