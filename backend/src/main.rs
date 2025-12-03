@@ -17,7 +17,7 @@ async fn main() -> std::io::Result<()> {
     let port = env::var("SERVER_PORT").unwrap_or_else(|_| "8080".to_string());
     let upload_dir = env::var("UPLOAD_DIR").unwrap_or_else(|_| "../uploads".to_string());
 
-    // 确保上传目录存在
+    // 检查上传目录存在
     std::fs::create_dir_all(&upload_dir).expect("Failed to create upload directory");
 
     // 创建数据库连接池
